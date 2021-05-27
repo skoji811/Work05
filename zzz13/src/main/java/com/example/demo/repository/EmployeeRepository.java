@@ -1,5 +1,5 @@
 package com.example.demo.repository;
 
-public interface EmployeeRepository {
+@Repository
+public interface EmployeeRepository extends JpaRepository<Employee, Long> {}
 
-}
