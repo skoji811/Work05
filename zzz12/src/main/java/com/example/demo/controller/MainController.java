@@ -22,4 +22,5 @@ Iterable<Idol> list = repository.findAll();
 model.addAttribute("data",list);
 return "index";
 　　　　}
+
 }
