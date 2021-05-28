@@ -18,5 +18,5 @@ mav.setViewName("index");
 Iterable<Idol> list = repository.findAll();
 mav.addObject("data", list);
 return mav;
-　　　　}
+}
 }
