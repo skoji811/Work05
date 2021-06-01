@@ -28,4 +28,9 @@ private String insert(@ModelAttribute("formInsert") Idol idol, Model model) {
 repository.saveAndFlush(idol);
 return "redirect:/";
 }
+@RequestMapping("/update")
+public String update(@ModelAttribute("updateInsert")Idol idol,Model model) {
+repository.saveAndFlush(idol);
+return "redirect:/";
+}
 }
