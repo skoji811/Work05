@@ -33,4 +33,10 @@ public String update(@ModelAttribute("updateInsert")Idol idol,Model model) {
 repository.saveAndFlush(idol);
 return "redirect:/";
 }
+@RequestMapping("/delete")
+public String delete(@ModelAttribute("deleteInsert")Idol idol,Model model) {
+	repository.delete(idol);
+	return "redirect:/";
+
+}
 }
