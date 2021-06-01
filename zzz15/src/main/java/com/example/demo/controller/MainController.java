@@ -1,8 +1,11 @@
 package com.example.demo.controller;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.example.demo.entity.Idol;
@@ -18,5 +21,11 @@ private String index(Model model) {
 Iterable<Idol> list = repository.findAll();
 model.addAttribute("data", list);
 return "index";
+}
+@RequestMapping("/insert")
+@Transactional(readOnly = false)
+private String insert(@ModelAttribute("formInsert") Idol idol, Model model) {
+repository.saveAndFlush(idol);
+return "redirect:/";
 }
 }
