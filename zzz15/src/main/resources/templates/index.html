@@ -22,6 +22,13 @@
 <input type="submit" value="Update"></input>
 </form>
 </div>
+<div>
+<form method="post" action="/delete" th:object="${formDelete}">
+<p>Delete</p>
+<input type="text" name="id" size="50" placeholder="ID"></input>
+<input type="submit" value="Delete"></input>
+</form>
+</div>
 <table>
 <thead>
 <tr>
