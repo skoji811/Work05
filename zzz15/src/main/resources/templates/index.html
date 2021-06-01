@@ -13,6 +13,15 @@
 <input type="submit" value="Insert"></input>
 </form>
 </div>
+<div>
+<form method="post" action="/update" th:object="${formUpdate}">
+<p>Update</p>
+<input type="text" name="id" size="50" placeholder="ID"></input>
+<input type="text" name="name" size="50" placeholder="名前"></input>
+<input type="text" name="age" size="50" placeholder="年齢"></input>
+<input type="submit" value="Update"></input>
+</form>
+</div>
 <table>
 <thead>
 <tr>
