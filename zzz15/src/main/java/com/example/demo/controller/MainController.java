@@ -25,29 +25,32 @@ Iterable<Idol> list = repository.findAll();
 model.addAttribute("data", list);
 return "index";
 }
-@PostMapping("/insert")
-@Transactional(readOnly = false)
-private String insert(@ModelAttribute("formInsert") Idol idol, Model model) {
-repository.saveAndFlush(idol);
-return "redirect:/";
-}
+
 @GetMapping("/update")
 public String update(Model model) {
 	Iterable<Idol> list = repository.findAll();
 	model.addAttribute("data", list);
 	return "update";
 }
-@PostMapping("/update")
-public String setUpdate(@ModelAttribute("updateInsert")Idol idol,Model model) {
-	repository.saveAndFlush(idol);
-	return "redirect:/";
-	}
 @GetMapping("/delete")
 public String delete(Model model) {
 	Iterable<Idol> list = repository.findAll();
 	model.addAttribute("data", list);
 	return "delete";
 }
+
+@PostMapping("/insert")
+@Transactional(readOnly = false)
+private String insert(@ModelAttribute("formInsert") Idol idol, Model model) {
+repository.saveAndFlush(idol);
+return "redirect:/";
+}
+@PostMapping("/update")
+public String setUpdate(@ModelAttribute("updateInsert")Idol idol,Model model) {
+	repository.saveAndFlush(idol);
+	return "redirect:/";
+	}
+
 
 @PostMapping("/delete")
 public String setDelete(@ModelAttribute("deleteInsert")Idol idol,Model model) {
