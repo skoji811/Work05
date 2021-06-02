@@ -20,10 +20,15 @@ public class MainController {
 IdolRepository repository;
 
 @GetMapping
-private String index(Model model) {
+public String index(Model model) {
 Iterable<Idol> list = repository.findAll();
 model.addAttribute("data", list);
 return "index";
+}
+
+@PostMapping("/new")
+public String newSet(Model model) {
+	return "new";
 }
 
 @GetMapping("/update")
