@@ -18,13 +18,14 @@ public class MainController {
 
 @Autowired
 IdolRepository repository;
-@RequestMapping("/")
+
+@GetMapping
 private String index(Model model) {
 Iterable<Idol> list = repository.findAll();
 model.addAttribute("data", list);
 return "index";
 }
-@RequestMapping("/insert")
+@PostMapping("/insert")
 @Transactional(readOnly = false)
 private String insert(@ModelAttribute("formInsert") Idol idol, Model model) {
 repository.saveAndFlush(idol);
@@ -39,7 +40,7 @@ public String update(Model model) {
 @PostMapping("/update")
 public String setUpdate(@ModelAttribute("updateInsert")Idol idol,Model model) {
 	repository.saveAndFlush(idol);
-	return "index";
+	return "redirect:/";
 	}
 @GetMapping("/delete")
 public String delete(Model model) {
@@ -51,6 +52,6 @@ public String delete(Model model) {
 @PostMapping("/delete")
 public String setDelete(@ModelAttribute("deleteInsert")Idol idol,Model model) {
 	repository.delete(idol);
-	return "index";
+	return "redirect:/";
 }
 }
