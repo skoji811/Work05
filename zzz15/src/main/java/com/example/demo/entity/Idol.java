@@ -21,7 +21,7 @@ public class Idol {
     @Column(name="age")
     private Integer age;
 
-    // getter and setter
+    
     public Integer getId() {
         return id;
     }

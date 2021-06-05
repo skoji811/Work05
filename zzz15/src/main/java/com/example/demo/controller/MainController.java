@@ -26,7 +26,7 @@ model.addAttribute("data", list);
 return "index";
 }
 
-@PostMapping("/new")
+@GetMapping("/new")
 public String newSet(Model model) {
 	return "new";
 }
