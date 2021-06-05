@@ -26,9 +26,9 @@ model.addAttribute("data", list);
 return "index";
 }
 
-@GetMapping("/new")
+@GetMapping("new")
 public String newSet(Model model) {
-	return "new";
+	return "/new";
 }
 
 @GetMapping("/update")
