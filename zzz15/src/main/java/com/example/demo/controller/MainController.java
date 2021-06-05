@@ -28,7 +28,7 @@ return "index";
 
 @GetMapping("/new")
 public String newSet(Model model) {
-	return "/new";
+	return "new";
 }
 
 @GetMapping("/update")
