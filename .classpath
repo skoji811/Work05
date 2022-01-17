@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="zzz11/src/main/java"/>
+	<classpathentry kind="src" path="zzz11/src/test/java"/>
+	<classpathentry kind="src" path="zzz12/src/main/java"/>
+	<classpathentry kind="src" path="zzz12/src/test/java"/>
+	<classpathentry kind="src" path="zzz13/src/main/java"/>
+	<classpathentry kind="src" path="zzz13/src/test/java"/>
+	<classpathentry kind="src" path="zzz14/src/main/java"/>
+	<classpathentry kind="src" path="zzz14/src/test/java"/>
+	<classpathentry kind="src" path="zzz15/src/main/java"/>
+	<classpathentry kind="src" path="zzz15/src/test/java"/>
+	<classpathentry kind="lib" path="zzz11/gradle/wrapper/gradle-wrapper.jar"/>
+	<classpathentry kind="lib" path="zzz12/gradle/wrapper/gradle-wrapper.jar"/>
+	<classpathentry kind="lib" path="zzz13/gradle/wrapper/gradle-wrapper.jar"/>
+	<classpathentry kind="lib" path="zzz14/gradle/wrapper/gradle-wrapper.jar"/>
+	<classpathentry kind="lib" path="zzz15/gradle/wrapper/gradle-wrapper.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
